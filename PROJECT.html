@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> GKV Limited Company</title>
+
+    <link rel="stylesheet" href="project.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">GKV Limited Company</div>
+
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#subjects">Subject</a>
+            <a href="#payment">Payment</a>
+            <a href="#login">Login</a>
+        </nav>
+
+        <div class="cart">
+             Cart <span id="cartCount">0</span>
+        </div>
+    </header>
+
+
+    <!-- Main Section -->
+    <main>
+
+        <section class="hero">
+            <h1>Subject Store</h1>
+            <p>Select your subjects and add them to your cart.</p>
+        </section>
+
+
+        <!-- Subject Table -->
+        <section class="table-section" id="subjects">
+
+            <h2>Available Subjects</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Subject</th>
+                            <th>Price</th>
+                            <th>Qty</th>
+                            <th>Add to Cart</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>1</td>
+                            <td>Physics</td>
+                            <td>₹350</td>
+                            <td>
+                                <input type="number" class="quantity"
+                                    value="1" min="1" data-id="1">
+                            </td>
+                            <td>
+                                <button class="cart-btn"
+                                    onclick="addToCart(1, 'Physics', 350)">
+                                    Add to Cart
+                                </button>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>2</td>
+                            <td>Chemistry</td>
+                            <td>₹450</td>
+                            <td>
+                                <input type="number" class="quantity"
+                                    value="1" min="1" data-id="2">
+                            </td>
+                            <td>
+                                <button class="cart-btn"
+                                    onclick="addToCart(2, 'Chemistry', 450)">
+                                    Add to Cart
+                                </button>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>3</td>
+                            <td>Biology</td>
+                            <td>₹300</td>
+                            <td>
+                                <input type="number" class="quantity"
+                                    value="1" min="1" data-id="3">
+                            </td>
+                            <td>
+                                <button class="cart-btn"
+                                    onclick="addToCart(3, 'Biology', 300)">
+                                    Add to Cart
+                                </button>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>4</td>
+                            <td>Maths</td>
+                            <td>₹300</td>
+                            <td>
+                                <input type="number" class="quantity"
+                                    value="1" min="1" data-id="4">
+                            </td>
+                            <td>
+                                <button class="cart-btn"
+                                    onclick="addToCart(4, 'Maths', 300)">
+                                    Add to Cart
+                                </button>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>5</td>
+                            <td>Programming</td>
+                            <td>₹400</td>
+                            <td>
+                                <input type="number" class="quantity"
+                                    value="1" min="1" data-id="5">
+                            </td>
+                            <td>
+                                <button class="cart-btn"
+                                    onclick="addToCart(5, 'Programming', 400)">
+                                    Add to Cart
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- Cart -->
+        <section class="cart-section">
+
+            <h2>Your Cart</h2>
+
+            <div id="cartItems">
+                <p class="empty-cart">Your cart is empty.</p>
+            </div>
+
+            <div class="total">
+                Total: ₹<span id="totalPrice">0</span>
+            </div>
+
+            <button class="payment-btn" onclick="makePayment()">
+                Proceed to Payment
+            </button>
+
+        </section>
+
+
+        <!-- Location -->
+        <section class="location">
+
+            <div>
+                <h2>Our Location</h2>
+                <p>GKV Limited Company</p>
+                <p>New Delhi, India</p>
+            </div>
+<button onclick="openMap()">
+    Google Maps
+</button>
+
+<script>
+function openMap() {
+    window.open("https://maps.google.com/", "_blank");
+}
+</script>
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-logo">
+            ABC
+        </div>
+
+        <p>© 2026 ABC Limited Company</p>
+
+        <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#subjects">Subjects</a>
+            <a href="#payment">Payment</a>
+            <a href="#login">Login</a>
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
