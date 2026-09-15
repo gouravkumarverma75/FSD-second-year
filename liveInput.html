@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    
+
+</head>
+<body>
+     <input type ="text" id="nameInput" placeholder="Enter your name" height="30px" width="30px">
+<p id="greet"></p>
+
+<script>
+    const input = document.getElementById("nameInput");
+    const greet = document.getElementById("greet");
+
+    input.addEventListener("input", () => {
+        greet.textContent = `Hello, ${input.value}!`;
+    });
+</script>
+
+
+    
+</script>
+</body>
+</html>

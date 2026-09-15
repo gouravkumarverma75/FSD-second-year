@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+      <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+    <button id ="btn">click Me</button>
+<p id="output">HELLO</p>
+
+<script>
+    document.getElementById("btn").addEventListener("click",() => {
+        document.getElementById("output").textContent ="button was clicked!";
+
+    });
+</script>
+</body>
+</html>

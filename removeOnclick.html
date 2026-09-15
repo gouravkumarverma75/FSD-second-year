@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            font-style: italic;
+            color: rgb(2, 96, 8);
+        }
+    </style>
+</head>
+<body>
+    <ul id="tasklist">
+        <li>sample task 1</li>
+        <li>sample task 2</li>
+    </ul>
+
+    <script>
+        document.getElementById("tasklist").addEventListener("click", (e) => {
+            if(e.target.tagName === "LI"){
+                e.target.remove();
+            }
+        })
+    </script>
+</body>
+</html>

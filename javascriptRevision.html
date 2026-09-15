@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styling.css">
+
+</head>
+
+<body>
+    <h2>1.My first javascript file</h2>
+    <button onclick="runcode()">Run code1</button>
+
+    <h2>2.Data type examples</h2>
+    <button onclick="runcode2()">Run code 2</button>
+
+    <h3>3.Operators Example</h3>
+    <button onclick="runcode3()">Run code 3</button>
+
+    <h3>4. If-else Example</h3>
+    <button onclick="runcode4()">Run code 4</button>
+
+    <h3>5.Function Example</h3>
+    <button onclick="runcode5()">Run code 5</button>
+
+    <h3>6.Array Example</h3>
+    <button onclick="runcode6()">Run code 6</button>
+
+
+    <h3>7.Objects examples </h3>
+    <button onclick="runcode7()">Run code 7</button>
+
+    <h3>9.DOM manipulation </h3>
+    <button onclick="runcode9()">Run code 9</button>
+
+    <h2>Template Literals Example</h2>
+    <button onclick="runCode8()">Run Code</button>
+
+
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+    <p id="result5"></p>
+    <p id="result6"></p>
+    <p id="result7"></p>
+    <p id="demoText">This text is updated.</p>
+    <p id="result8"></p>
+
+    <h3> 10.Event example </h3>
+    <button onclick="runcode10()">Run code 10</button>
+    <button id="clickMeBtn" style="background-color: rgb(3, 103, 18);">Click me</button>
+    <p id="result10"></p>
+
+
+    <script>
+        function runcode() {
+            let number1 = 13;
+            let number2 = 89;
+
+            let sum = number1 + number2;
+
+            document.getElementById("result1").innerText = "Sum is: " + sum;
+        }
+    </script>
+
+    <script>
+
+        function runcode2() {
+            let text1 = "Hello";
+            let text2 = "World";
+
+            let greeting = text1 + " " + text2;
+
+            document.getElementById("result2").innerText = greeting;
+        }
+    </script>
+
+    <script>
+        function runcode3() {
+            let num1 = 10;
+            let num2 = 3;
+
+            let multiplication = num1 * num2;
+            let division = num1 / num2;
+            let remainder = num1 % num2;
+            let addition = num1 + num2;
+
+            document.getElementById("result3").innerText = "Multiplication is: " + multiplication;
+            document.getElementById("result3").innerText += "\nDivision is: " + division;
+            document.getElementById("result3").innerText += "\nRemainder is: " + remainder;
+            document.getElementById("result3").innerText += "\nAddition is: " + addition;
+        }
+    </script>
+
+    <script>
+        function runcode4() {
+            let marks = 90;
+
+            if (marks >= 90) {
+                document.getElementById("result4").innerText = "Grade A: Excellent performance!";
+            } else if (marks >= 60) {
+                document.getElementById("result4").innerText = "Grade B: Good performance!";
+            } else {
+                document.getElementById("result4").innerText = "Grade C: Needs improvement.";
+            }
+        }
+    </script>
+
+    <script>
+        function runcode5() {
+
+            function addNumber(x, y) {
+                return x + y;
+            }
+
+            let sum = addNumber(7, 8);
+
+            document.getElementById("result5").innerText = "the sum:" + sum;
+        }
+    </script>
+
+    <script>
+        function runcode6() {
+            let student = ['Gaurav', 'Anushka', 'Aman', 'Divyanshu'];
+
+            let fourth = student[3];
+            let total = student.length;
+
+            student.push('Anshuman');
+
+            document.getElementById("result6").innerText = "fourth: " + fourth + '|' +
+                "total: " + total + '|' + "After add another name: " + student;
+        }
+    </script>
+
+    <script>
+        function runcode7() {
+            let student = {
+                name: 'Gaurav',
+                age: 22,
+                city: 'Delhi',
+                marks: {
+                    math: 99,
+                    science: 85,
+                    english: 90,
+                }
+            }
+
+            let studentName = student.name;
+            let studentAge = student.age;
+            let studentCity = student.city;
+            let mathMarks = student.marks.math;
+            let scienceMarks = student.marks.science;
+            let englishMarks = student.marks.english;
+
+            document.getElementById("result7").innerText = "Name: " + studentName + ", Age: " + studentAge + ", City: " + studentCity + "\nMath: " + mathMarks + ", Science: " + scienceMarks + ", English: " + englishMarks;
+        }
+    </script>
+
+    <script>
+        function runcode9() {
+            let demoText = document.getElementById("demoText");
+            demoText.innerText = "This text is updated.";
+            demoText.style.color = "green";
+            demoText.style.fontSize = "30px";
+        }
+    </script>
+
+    <script>
+        function runcode8() {
+            let name = "Gaurav";
+            let age = 22;
+            let city = "Delhi";
+
+            document.getElementById("result8").innerText = `Name: ${name}, Age: ${age}, City: ${city}`;
+        }
+
+        function runcode10() {
+            let clickMeBtn = document.getElementById("clickMeBtn");
+            clickMeBtn.addEventListener("click", function () {
+                alert("Button clicked by Gaurav!");
+            });
+        }
+    </script>
+
+    <script>
+        function runCode8() {
+            let name = "Riya";
+            let marks = 88;
+            // old way: "Name: " + name + ", Marks: " + marks
+            // new way: use backticks ` ` and ${ } to insert variables directly
+            let message = `Name: ${name}, Marks: ${marks}`;
+            // showing result on the page
+            document.getElementById("result8").innerText = message;
+        }
+    </script>
+
+
+
+</body>
+
+</html>

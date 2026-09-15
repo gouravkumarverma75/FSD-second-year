@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <style>
+        button{
+   background-color: rgb(67, 4, 255);
+   color: rgb(39, 172, 221);
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-style: bolder;
+}
+input{
+    font-weight: bolder; 
+}
+
+
+    </style>
+</head>
+<body>
+    <input type ="text" id="taskInput" placeholder="Enter the name">
+    <button id="addBtn">Add</button>
+    <ul id="tasklist"></ul>
+
+    <script>
+        document.getElementById("addBtn").addEventListener("click", () =>{
+            const input = document.getElementById("taskInput");
+            if(input.value.trim()=== "") return;
+
+            const li = document.createElement("li");
+            li.textContent = input.value;
+            document.getElementById("tasklist").appendChild(li);
+            input.value = "";
+        });
+    </script>
+</body>
+</html>
